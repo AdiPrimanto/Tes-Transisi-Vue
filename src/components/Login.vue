@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <div class="auth-wrapper mt-5">
             <div class="auth-inner">
                 <Error v-if="error" :error="error" />

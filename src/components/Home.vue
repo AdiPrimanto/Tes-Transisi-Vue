@@ -5,34 +5,36 @@
 
         <div class="row">
             <div class="col-md-12">
-                <table class="table table-striped table-bordered border-dark">
-                    <thead>
-                        <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First Name</th>
-                        <th scope="col">Last Name</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Avatar</th>
-                        <th scope="col">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="user in users" :key="user.id">
-                            <th scope="row">{{user.id - 6}}</th>
-                            <td>{{user.first_name}}</td>
-                            <td>{{user.last_name}}</td>
-                            <td>{{user.email}}</td>
-                            <td><img :src="user.avatar" alt="" class="img-thumbnail" width="80"></td>
-                            <td>
-                                <div class="bd-button">
-                                    <b-button @click="openModalDetail(user.id)" class="btn btn-sm btn-success">Details</b-button>
-                                    <b-button @click="openModalEdit(user.id)" class="btn btn-sm btn-info">Edit</b-button>
-                                    <b-button @click="deleteUser(user.id)" class="btn btn-sm btn-danger">Delete</b-button>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered border-dark">
+                        <thead>
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Avatar</th>
+                            <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="user in users" :key="user.id">
+                                <th scope="row">{{user.id - 6}}</th>
+                                <td>{{user.first_name}}</td>
+                                <td>{{user.last_name}}</td>
+                                <td>{{user.email}}</td>
+                                <td><img :src="user.avatar" alt="" class="img-thumbnail" width="80"></td>
+                                <td>
+                                    <div class="bd-button">
+                                        <b-button @click="openModalDetail(user.id)" class="btn btn-sm btn-success">Details</b-button>
+                                        <b-button @click="openModalEdit(user.id)" class="btn btn-sm btn-info">Edit</b-button>
+                                        <b-button @click="deleteUser(user.id)" class="btn btn-sm btn-danger">Delete</b-button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
