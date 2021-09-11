@@ -48,13 +48,16 @@ export default {
         async handleSubmit() {
             try {
                 this.spinners = true
+                
                 const response = await axios.post('login', {
                     email: this.email,
                     password: this.password,
                 });
+
                 setTimeout(function(){
                     this.spinners = false
                 }, 1000);
+
                 localStorage.setItem('token', response.data.token)
 
                 Swal.fire({
